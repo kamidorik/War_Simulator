@@ -1,21 +1,99 @@
 function myFunction() {
-var country = ["Russia", "USA", "France", "Germany", "China", "United Kingdom", "Italy", "Spain"];
+var country = ["Russia", "USA", "France", "Germany", "China", "United Kingdom", "Italy", "Spain", "Japan", "Republic of Korea", "Poland"];
 var alliance = [{'name':'Allies', 'countrie':[]},{'name':'Comintern', 'countrie':[]}, {'name':'Axis', 'countrie':[]}];
-var normflag = ["'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/900px-Flag_of_Russia.svg.png'", "http://www.hoi4wiki.com/images/3/32/United_States.png", "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/900px-Flag_of_France.svg.png", "http://www.hoi4wiki.com/images/c/cc/West_Germany.png", "http://www.hoi4wiki.com/images/8/81/China.png", "http://www.hoi4wiki.com/images/2/29/United_Kingdom.png", "http://vignette1.wikia.nocookie.net/harrypotter/images/b/b3/Flag_of_Italy.png/revision/latest?cb=20150427040631&path-prefix=ru", "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/750px-Flag_of_Spain.svg.png"];
-var commcountry = ["USSR", "The Communist States of America", "Communist France", "DDR", "People's Republic of China", "Britain Communist Republic", "Italian Socialist Republic", "Spanish Democratic Republic"];
-var commflag = ["http://www.hoi4wiki.com/images/6/67/Soviet_Union.png", "http://i.imgur.com/66ltGUT.png", "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Communist_France.svg", "http://www.hoi4wiki.com/images/f/f2/East_Germany.png", "http://www.hoi4wiki.com/images/c/c1/Chinese_People%27s_Republic.png","http://img15.deviantart.net/cbdf/i/2011/195/2/5/communist_britain_flag_by_party9999999-d3r9ib6.png", "http://vignette1.wikia.nocookie.net/harrypotter/images/b/b3/Flag_of_Italy.png/revision/latest?cb=20150427040631&path-prefix=ru", "http://orig10.deviantart.net/a33e/f/2015/339/8/6/spain_02__gdr_emblem_rye_with_rep__coat_of_arms__by_matritum-d9j4c8t.png"];
-var fasccountry = ["Russian Empire", "The Confederate States of America", "Vichy France", "German Empire", "Chinese Empire", "Britain Empire", "Kingdom of Italy", "Nationalist Spain"];
-var fascflag = ["https://i.redd.it/e2sdx2s3px7y.png", "http://vignette4.wikia.nocookie.net/thesquad/images/0/0e/FascistUSA.png/revision/latest?cb=20150404044934", "http://www.hoi4wiki.com/images/e/ec/Vichy_France.png", "http://www.hoi4wiki.com/images/e/e9/German_Reich.png", "http://www.hoi4wiki.com/images/d/d0/Shanxi.png", "http://www.hoi4wiki.com/images/2/29/United_Kingdom.png", "http://www.hoi4wiki.com/images/2/2a/Italy.png", "http://www.hoi4wiki.com/images/2/2c/Nationalist_Spain.png"];
+var normflag = ["'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/900px-Flag_of_Russia.svg.png'", "http://www.hoi4wiki.com/images/3/32/United_States.png", "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/900px-Flag_of_France.svg.png", "http://www.hoi4wiki.com/images/c/cc/West_Germany.png", "http://www.hoi4wiki.com/images/8/81/China.png", "http://www.hoi4wiki.com/images/2/29/United_Kingdom.png", "http://vignette1.wikia.nocookie.net/harrypotter/images/b/b3/Flag_of_Italy.png/revision/latest?cb=20150427040631&path-prefix=ru", "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/750px-Flag_of_Spain.svg.png", "http://oi63.tinypic.com/2ibyivt.jpg", "http://www.jposc.undp.org/content/dam/jposc/img/Flags/Partner%20Countries/UNDP-JPOSC-Flag-South_Korea.svg.png", "http://www.mapascotland.org/wp-content/uploads/2014/02/poland-flag.jpg"];
+var commcountry = ["USSR", "The Communist States of America", "Communist France", "DDR", "People's Republic of China", "Britain Communist Republic", "Italian Socialist Republic", "Spanish Democratic Republic", "Communist Japan", "People's Republic of Korea", "Polish People's Republic"];
+var commflag = ["http://www.hoi4wiki.com/images/6/67/Soviet_Union.png", "http://i.imgur.com/66ltGUT.png", "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Communist_France.svg", "http://www.hoi4wiki.com/images/f/f2/East_Germany.png", "http://www.hoi4wiki.com/images/c/c1/Chinese_People%27s_Republic.png","http://img15.deviantart.net/cbdf/i/2011/195/2/5/communist_britain_flag_by_party9999999-d3r9ib6.png", "http://vignette1.wikia.nocookie.net/harrypotter/images/b/b3/Flag_of_Italy.png/revision/latest?cb=20150427040631&path-prefix=ru", "http://orig10.deviantart.net/a33e/f/2015/339/8/6/spain_02__gdr_emblem_rye_with_rep__coat_of_arms__by_matritum-d9j4c8t.png", "http://vignette2.wikia.nocookie.net/althistory/images/f/f5/North_Japan_%28Flag_Contest%29.png/revision/latest?cb=20140122044045", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/800px-Flag_of_North_Korea.svg.png", "http://orig00.deviantart.net/150b/f/2013/280/4/2/flag_of_eastern_poland_by_tiltschmaster-d6pmj4i.png"];
+var fasccountry = ["Russian Empire", "The Confederate States of America", "Vichy France", "German Empire", "Chinese Empire", "Britain Empire", "Kingdom of Italy", "Nationalist Spain", "Japanese Empire", "Korean Empire", "Poland-Hungary"];
+var fascflag = ["https://i.redd.it/e2sdx2s3px7y.png", "http://vignette4.wikia.nocookie.net/thesquad/images/0/0e/FascistUSA.png/revision/latest?cb=20150404044934", "http://www.hoi4wiki.com/images/e/ec/Vichy_France.png", "http://www.hoi4wiki.com/images/e/e9/German_Reich.png", "http://www.hoi4wiki.com/images/d/d0/Shanxi.png", "http://www.hoi4wiki.com/images/2/29/United_Kingdom.png", "http://www.hoi4wiki.com/images/2/2a/Italy.png", "http://www.hoi4wiki.com/images/2/2c/Nationalist_Spain.png", "http://www.hoi4wiki.com/images/f/fc/Japan.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flag_of_Korea_%281899%29.svg/850px-Flag_of_Korea_%281899%29.svg.png", "https://www.alternatehistory.com/forum/attachments/poland-hungary-flag-jpg.237392/"];
 var ideology = ["Capitalism", "Communism", "Fascism"];
 var numcountry = 0;
 var countries = []
 var turn = 0;
-var nenemy = 6;
+var nenemy = 10;
 var stop = "False"
 
 document.write("<br>Countries generation...</br>");
+function check() {
+	var curideology = ideopoints.indexOf(Math.max.apply( Math, ideopoints ));
+	var ideopp = ideology.indexOf(countries[i].ideology);
+	var civ = Math.floor(Math.random() * (2 - 0) + 0)
+	if ((curideology != ideology.indexOf(countries[i].ideology) && (turn > 3) && (countries[i].canrevolution == "True") && (ideopp != 2))) {
+		var numcountry = (countries[i].id-1);
+		if (countries[i].alliance != "none") {
+			var ideo = ideology.indexOf(countries[i].ideology);
+			var alcou1 = alliance[ideo].countrie;
+			var defeated = alcou1.indexOf(countries[i].name);
+			alliance[ideo].countrie.splice(defeated, 1);
+		}
+		if (curideology == 1) {
+			tcountry = commcountry;
+			tflag = commflag;
+		} else if (curideology == 2) {
+			tcountry = fasccountry;
+			tflag = fascflag;
+		} else {
+			tcountry = country;
+			tflag = normflag;
+		} 
+
+		oldname = countries[i].name
+		curideology = ideology[curideology];
+		curcountry = tcountry[numcountry];
+		curflag = tflag[numcountry];
+
+		countries[i].name = curcountry;
+		countries[i].ideology = curideology;
+		countries[i].flag = curflag;
+		countries[i].canrevolution = "False"
+		countries[i].alliance = "none"
+
+		for (ooo = 0; ooo < countries.length; ooo++) {
+			countries[ooo].canattack.push(countries[i].name);
+		}
+
+		document.write("<br><green>"+oldname+" is becoming "+countries[i].name+"!</green>");
+		document.write("<br><img src="+countries[i].flag+" width="+"64"+"></br>");
+	}
+	if ((curideology != ideology.indexOf(countries[i].ideology) && (turn > 3) && (countries[i].canrevolution == "True") && (ideopp == 2 || ideopp == 1) && (civ == 1))) {
+		document.write("<br><green>Revolution is coming to "+countries[i].name+"!</green>");
+		var win = Math.floor(Math.random() * (2 - 0) + 0)
+		if (win == 1) {
+			var numcountry = (countries[i].id-1);
+			if (curideology == 1) {
+				tcountry = commcountry;
+				tflag = commflag;
+			} else if (curideology == 2) {
+				tcountry = fasccountry;
+				tflag = fascflag;
+			} else {
+				tcountry = country;
+				tflag = normflag;
+			}
+			curideology = ideology[curideology];
+			curcountry = tcountry[numcountry];
+			curflag = tflag[numcountry];
+			countries[i].canrevolution = "False"
+
+			++nenemy;
+
+			for (ooo = 0; ooo < countries.length; ooo++) {
+				countries[ooo].canattack.push(curcountry);
+			}
+
+			countries.push({'name':curcountry, 'ideology':curideology, 'warpower':Math.floor(Math.random() * (71 - 30) + 30), 'flag':curflag, 'canattack':canattack, 'alliance':calliance, 'ideopoints': ideopoints, 'canrevolution': "False", 'id':numcountry});
+			document.write("<br><green>New country is created!</green>");
+			document.write("<br>"+curcountry+"</br>");
+			document.write("<br><img src="+curflag+" width="+"64"+"></br>");
+			document.write("<br>"+curideology)
+		} else {
+			document.write("<br><red>Revolution in "+countries[i].name+" is failed!</red>");
+		}
+	} 
+}
 for (i = 0; i < country.length; i++) {
-	var curideology = Math.floor(Math.random() * (3 - 0) + 0);
+	var ideopoints = [Math.floor(Math.random() * (31 - 0) + 0), Math.floor(Math.random() * (31 - 0) + 0), Math.floor(Math.random() * (31 - 0) + 0)]
+	var curideology = ideopoints.indexOf(Math.max.apply( Math, ideopoints ));
 	var tcountry = "nothing"
 	var tflag = "nothing"
 	var canattack = []
@@ -36,7 +114,7 @@ for (i = 0; i < country.length; i++) {
 
 	++numcountry;
 
-    countries.push({'name':curcountry, 'ideology':curideology, 'warpower':Math.floor(Math.random() * (101 - 20) + 20), 'flag':curflag, 'canattack':canattack, 'alliance':calliance});
+    countries.push({'name':curcountry, 'ideology':curideology, 'warpower':Math.floor(Math.random() * (101 - 30) + 30), 'flag':curflag, 'canattack':canattack, 'alliance':calliance, 'ideopoints': ideopoints, 'canrevolution': "True", 'id':numcountry});
   
     document.write("<br>"+countries[i].name+"</br>");
     document.write("<br><img src="+countries[i].flag+" width="+"64"+"></br>");
@@ -54,7 +132,8 @@ top:
 while (countries.length > 1) {
 	++turn;
 	document.write("<br>Turn: "+turn+"</br>");
-	if (turn == 100) {
+
+	if (turn == 50) {
 		for (i = 0; i < countries.length; i++) {
 			document.write("<br>"+countries[i].name+" superpower that have won!");
 		}
@@ -66,6 +145,10 @@ while (countries.length > 1) {
 		}
 	}
 	for (i = 0; i < countries.length; i++) {
+	var ccchoise = Math.floor(Math.random() * (3 - 0) + 0)
+	var idepo = countries[i].ideopoints[ccchoise];
+	++idepo;
+	check();
 		if (countries[i] == undefined) {
 			++i;
 			if (i > countries.length) {
@@ -121,11 +204,13 @@ while (countries.length > 1) {
 					document.write("<br><green>"+countries[enemy].name+" is joined to "+alliance[ideo].name+" alliance!</green>");
 					alliance[ideo].countrie.push(countries[enemy].name)
 					countries[enemy].alliance = alliance[ideo].name;
-					for (nnn = 0; nnn < alliance[ideo].countrie.length; nnn++) {
-						var index1 = countries[enemy].canattack.indexOf(countries[i].name);
-						countries[enemy].canattack.splice(index1, 1);
-						var index2 = countries[i].canattack.indexOf(countries[enemy].name);
-						countries[nnn].canattack.splice(index2, 1);
+					for (nnn = 0; nnn < countries.length; nnn++) {
+						if (countries[nnn].alliance == countries[enemy].alliance) {
+							var index1 = countries[enemy].canattack.indexOf(countries[i].name);
+							countries[enemy].canattack.splice(index1, 1);
+							var index2 = countries[i].canattack.indexOf(countries[enemy].name);	
+							countries[nnn].canattack.splice(index2, 1);
+						}
 					}
 				} else if (countries[i].alliance == countries[enemy].alliance) {
 					document.write("<br><red>"+countries[enemy].name+" is already in "+alliance[ideo].name+" alliance!</red>")
@@ -137,10 +222,6 @@ while (countries.length > 1) {
 			countries[i].warpower = countries[i].warpower + 2;
 		}
 	}
-}
-var tesst = []
-for (i = 0; i < ideology.length; i++) {
-	tesst.push(alliance[i].countrie.length)
 }
 for (aaa = 0; aaa < ideology.length; aaa++) {
 	if (countries.length == 1) {
