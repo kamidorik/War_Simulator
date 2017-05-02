@@ -74,6 +74,7 @@ function check() {
 			curcountry = tcountry[numcountry];
 			curflag = tflag[numcountry];
 			countries[i].canrevolution = "False"
+			curwarpower = Math.floor(Math.random() * (countries[i].warpower - 30) + 30)
 
 			++nenemy;
 
@@ -81,7 +82,19 @@ function check() {
 				countries[ooo].canattack.push(curcountry);
 			}
 
-			countries.push({'name':curcountry, 'ideology':curideology, 'warpower':Math.floor(Math.random() * (71 - 30) + 30), 'flag':curflag, 'canattack':canattack, 'alliance':calliance, 'ideopoints': ideopoints, 'canrevolution': "False", 'id':numcountry});
+			countries.push({'name':curcountry, 'ideology':curideology, 'warpower':curwarpower, 'flag':curflag, 'canattack':canattack, 'alliance':calliance, 'ideopoints': ideopoints, 'canrevolution': "False", 'id':numcountry});
+			countries[i].warpower = countries[i].warpower - curwarpower
+			if (countries[i].warpower < 0) {
+					document.write("<br><green>"+countries[i].name+" is destroyed!</green>");
+					--nenemy;
+					if (countries[i].alliance != "none") {
+						var ideo = ideology.indexOf(countries[i].ideology);
+						var alcou1 = alliance[ideo].countrie;
+						var defeated = alcou1.indexOf(countries[i].name);
+						alliance[ideo].countrie.splice(defeated, 1);
+					}
+					countries.splice(i, 1);
+			}
 			document.write("<br><green>New country is created!</green>");
 			document.write("<br>"+curcountry+"</br>");
 			document.write("<br><img src="+curflag+" width="+"64"+"></br>");
@@ -135,7 +148,8 @@ while (countries.length > 1) {
 
 	if (turn == 50) {
 		for (i = 0; i < countries.length; i++) {
-			document.write("<br>"+countries[i].name+" superpower that have won!");
+			document.write("<br><green>"+countries[i].name+" superpower that have won!</green>");
+			document.write("<br><img src="+countries[i].flag+" width="+"64"+"></br>");
 		}
 		break top;
 	}
